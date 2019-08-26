@@ -89,20 +89,26 @@ export default {
       routes: [
         {
           path: '/',
-          name: 'welcome',
-          icon: 'smile',
-          component: './Welcome',
+          name: 'dashboard',
+          icon: 'bank',
+          component: './dashboard/index',
+        },
+        {
+          path: '/create-message',
+          name: 'create-message',
+          icon: 'edit',
+          component: './createMessage/index',
         },
         {
           path: '/createCard',
           name: 'create-card',
-          icon: 'smile',
+          icon: 'appstore',
           component: './createCard/index',
         },
         {
           path: '/activity',
           name: 'activity',
-          icon: 'smile',
+          icon: 'form',
           component: './activity/index',
         },
         {

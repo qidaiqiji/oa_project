@@ -382,7 +382,7 @@ function Header({ data }) {
             </Row>
             <Row>
               <Col span={12}>
-                <Form.Item {...headerLayout} label=" 全局背景色">
+                <Form.Item labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label=" 全局背景色">
                   {getFieldDecorator('bgColor', {
                     initialValue: data.bgColor,
                     rules: [
@@ -463,7 +463,7 @@ function ActivityTips({ data }) {
                 key="1"
                 header={
                   <Row type="flex" align="middle">
-                    <Col span={21}>
+                    <Col xl={20} xxl={21}>
                       <CollapseTitle
                         titleName="活动攻略"
                         keyWords="guideText"
@@ -516,7 +516,7 @@ function Banner({ data }) {
               key="2"
               header={
                 <Row type="flex" align="middle">
-                  <Col span={21}>
+                  <Col xl={20} xxl={21}>
                     <CollapseTitle
                       titleName="banner"
                       showInput={false}
@@ -564,7 +564,7 @@ function GoodsSuggest({ data, onChangeTableValue, onDelete }) {
         <Collapse.Panel
           header={
             <Row type="flex" align="middle">
-              <Col span={21}>
+              <Col xl={20} xxl={21}>
                 <CollapseTitle
                   titleName="商品推荐"
                   showInput={false}
@@ -609,7 +609,7 @@ function CouponList({ item, index }) {
               key={`1-${index}`}
               header={
                 <Row type="flex" align="middle">
-                  <Col span={21}>
+                  <Col xl={20} xxl={21}>
                     <CollapseTitle
                       titleName="优惠券"
                       styleText="四栏样式"
@@ -679,7 +679,7 @@ function ActList({ item, index, type }) {
               key={`1-${index}`}
               header={
                 <Row type="flex" align="middle">
-                  <Col span={21}>
+                  <Col xl={20} xxl={21}>
                     <CollapseTitle
                       titleName="特卖专场"
                       keyWords={`jsonInfo[${index}].title`}
@@ -777,7 +777,7 @@ function GoodsCommon({ item, index, onDelete, onChangeTableValue, type }) {
           key={`1-${index}`}
           header={
             <Row type="flex" align="middle">
-              <Col span={21}>
+              <Col xl={20} xxl={21}>
                 <CollapseTitle
                   titleName={titleName}
                   keyWords={`jsonInfo[${index}].title`}
@@ -825,7 +825,7 @@ function AdsPart({ item, index }) {
           key={`1-${index}`}
           header={
             <Row type="flex" align="middle">
-              <Col span={21}>
+              <Col xl={20} xxl={21}>
                 <CollapseTitle
                   titleName="广告位"
                   styleText="四栏样式"
@@ -880,7 +880,7 @@ function AllGoods({ data }) {
         <Collapse.Panel
           header={
             <Row type="flex" align="middle">
-              <Col span={21}>
+              <Col xl={20} xxl={21}>
                 <CollapseTitle
                   titleName="全部商品"
                   keyWords="allGoods.title"
@@ -924,7 +924,7 @@ function NavBar({ data }) {
             <Collapse.Panel
               header={
                 <Row type="flex" align="middle">
-                  <Col span={21}>
+                  <Col xl={20} xxl={21}>
                     <CollapseTitle
                       titleName="右边导航"
                       showInput={false}
@@ -1005,7 +1005,7 @@ function CollapseTitle({
             e.stopPropagation();
           }}
         >
-          <Col span={2}>
+          <Col xl={3} xxl={2}>
             <Form.Item style={{ marginBottom: 0 }}>
               {getFieldDecorator(selectType, {
                 valuePropName: 'checked',
@@ -1017,7 +1017,7 @@ function CollapseTitle({
               )}
             </Form.Item>
           </Col>
-          <Col span={10}>
+          <Col xl={8} xxl={10}>
             {showInput && (
               <Form.Item style={{ marginBottom: 0 }}>
                 {getFieldDecorator(keyWords, {
@@ -1032,26 +1032,28 @@ function CollapseTitle({
                       message: '最长十个汉字',
                     },
                   ],
-                })(<Input placeholder="请输入标题，10个汉字，必填" style={{ width: 400 }} />)}
+                })(<Input placeholder="请输入标题，10个汉字，必填" style={{ width: 250 }} />)}
               </Form.Item>
             )}
           </Col>
-          <Form.Item style={{ marginBottom: 0 }}>
-            {getFieldDecorator(radioKeyWords, {
-              initialValue: radioCheckedValue,
-              rules: [
-                {
-                  required: true,
-                },
-              ],
-            })(
-              <Radio.Group>
-                {radioGroup.map(item => (
-                  <Radio value={item.value}>{item.text}</Radio>
-                ))}
-              </Radio.Group>,
-            )}
-          </Form.Item>
+          <Col xl={4} xxl={8}>
+            <Form.Item style={{ marginBottom: 0 }}>
+              {getFieldDecorator(radioKeyWords, {
+                initialValue: radioCheckedValue,
+                rules: [
+                  {
+                    required: true,
+                  },
+                ],
+              })(
+                <Radio.Group>
+                  {radioGroup.map(item => (
+                    <Radio value={item.value}>{item.text}</Radio>
+                  ))}
+                </Radio.Group>,
+              )}
+            </Form.Item>
+          </Col>
         </Row>
       )}
     </MyContext.Consumer>
@@ -1282,7 +1284,7 @@ function IconFunction({ type, index, data, showAddOrMinus = false }) {
   return (
     <MyContext.Consumer>
       {({ onChangeOrder, reduceItem, addItem, resetFields }) => (
-        <Col span={3}>
+        <Col xl={4} xxl={3}>
           <Button
             style={{ marginLeft: 10 }}
             shape="circle"

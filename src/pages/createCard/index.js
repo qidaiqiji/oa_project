@@ -9,7 +9,7 @@ class CreateCard extends PureComponent {
     const cardList1 = [
       {
         title: '页面配置',
-        linkUrl: '',
+        linkUrl: '/homepage',
       },
     ];
     const cardList2 = [
@@ -45,7 +45,6 @@ class CreateCard extends PureComponent {
         title: '品类页',
         linkUrl: '',
       },
-
     ];
     const cardList5 = [];
     return (
@@ -77,34 +76,19 @@ class CreateCard extends PureComponent {
           </Row>
         </Affix>
         <Card style={{ margin: '20px 0' }} id="card1">
-            <CardItem
-            datasource={cardList1}
-            title="首页"
-            />
+          <CardItem datasource={cardList1} title="首页" />
         </Card>
         <Card style={{ margin: '20px 0' }} id="card2">
-            <CardItem
-            datasource={cardList2}
-            title="活动页"
-            />
+          <CardItem datasource={cardList2} title="活动页" />
         </Card>
         <Card style={{ margin: '20px 0' }} id="card3">
-            <CardItem
-            datasource={cardList3}
-            title="选品专辑"
-            />
+          <CardItem datasource={cardList3} title="选品专辑" />
         </Card>
         <Card style={{ margin: '20px 0' }} id="card4">
-            <CardItem
-            datasource={cardList4}
-            title="频道页"
-            />
+          <CardItem datasource={cardList4} title="频道页" />
         </Card>
         <Card style={{ margin: '20px 0' }} id="card5">
-            <CardItem
-            datasource={cardList5}
-            title="文章"
-            />
+          <CardItem datasource={cardList5} title="文章" />
         </Card>
       </PageHeaderWrapper>
     );
