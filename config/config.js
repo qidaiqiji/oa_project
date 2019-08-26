@@ -106,6 +106,12 @@ export default {
           component: './activity/index',
         },
         {
+          path: '/homepage',
+          name: 'homepage',
+          icon: 'smile',
+          component: './homepage/index',
+        },
+        {
           component: './404',
         },
       ],

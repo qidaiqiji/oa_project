@@ -1,6 +1,7 @@
 export default {
   'menu.welcome': '欢迎',
   'menu.create-card':'创建',
+  'menu.homepage':'首页配置',
   'menu.activity':'创建活动',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
